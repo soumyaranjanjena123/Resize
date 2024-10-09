@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <div class="table-container">
+          <table id="resizableTable">
+            <thead>
+              <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+                <td>Row 1, Cell 3</td>
+              </tr>
+              <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+                <td>Row 2, Cell 3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <div class="resizer resizer-bottom"></div>
+       <div class="text-area-container">
+          <label for="textarea">Enter your text:</label>
+          <textarea id="textarea" rows="4"></textarea>
+       </div>
+      </div>
+
+      <div class="right">
+        <!-- <label for="dropdown">Choose an option:</label> -->
+
+        <div class="dropDown-container">
+        <select id="dropdown">
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+      </div>
+
+        <div class="resize resizer-right"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
