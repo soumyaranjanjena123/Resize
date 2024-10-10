@@ -5,10 +5,15 @@ const right = document.querySelector('.right');
 const bottom = document.querySelector('.bottom');
 
 
+const main = document.querySelector(".main")
+
+
 // set the max width and height 
 
 const maxRightWidth = 400;
 const maxBottomHeight = 300;
+const minRightWidth = 200;
+const maxLowerHeight = 145;
 
 
 
@@ -27,16 +32,29 @@ function resizeRight(e) {
     console.log(newWidth)
     // main.style.width = `${e.clientX}px`;
 
+    if (newWidth > maxRightWidth) {
+        right.style.width = `${maxRightWidth}px`;
+        // main.style.width = `${containerWidth - maxRightWidth}px`;
+    } else if (newWidth < minRightWidth) { // Minimum width constraint
+        right.style.width = `${minRightWidth}px`;
+        // main.style.width = `${containerWidth - minRightWidth}px`;
+    } else {
+        right.style.width = `${newWidth}px`;
+        // main.style.width = `${newWidth}px`;
+    }
+
+    
+
 
     // new width doesnot exceed
 
-    if(newWidth>maxRightWidth){
-        right.style.width = `${maxRightWidth}px`;
-    }else if(newWidth<100){
-        right.style.width =`100px`
-    }else{
-        right.style.width = `${newWidth}px`
-    }
+    // if(newWidth>maxRightWidth){
+    //     right.style.width = `${maxRightWidth}px`;
+    // }else if(newWidth<100){
+    //     right.style.width =`100px`
+    // }else{
+    //     right.style.width = `${newWidth}px`
+    // }
 }
 
 function stopResizeRight() {
@@ -59,15 +77,24 @@ resizerBottom.addEventListener('mousedown', function (e) {
     // right.style.height = "160%"
     // main.style.height = `${e.clientY}px`;
 
+    console.log(newHeight);
+
+    // if(newHeight<maxLowerHeight){
+    //     bottom.style.height =`${maxLowerHeight}px`
+        
+    // }
+
     // height does not exceed
 
-    if(newHeight>maxBottomHeight){
-        bottom.style.height = `${maxBottomHeight}px`
-        right.style.height = `${173.6}% `
-    }else if(newHeight<100){
-        bottom.style.height = `100px`
-    }else{
-        bottom.style.height =`${newHeight}`
+    if (newHeight > maxBottomHeight) {
+        bottom.style.height = `${maxBottomHeight}px`;
+        // main.style.height = `${containerHeight - maxBottomHeight}px`;
+    } else if (newHeight < maxLowerHeight) { // Minimum height constraint
+        bottom.style.height = `${maxLowerHeight}px`;
+        // main.style.height = `${containerHeight - maxLowerHeight}px`;
+    } else {
+        bottom.style.height = `${newHeight}px`;
+        // main.style.height = `${newHeight}px`;
     }
 }
 
