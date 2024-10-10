@@ -56,8 +56,9 @@ html,body{
     grid-row: 2 / 3;
     grid-column: 1 / 2;
     height: 150px;
-    overflow: auto;
+    overflow: hidden;
     position: relative;
+    padding-bottom: 50px;
 }
 
 .resizer {
@@ -91,6 +92,7 @@ html,body{
     align-items: center;
     justify-content: center;
 
+
 }
 
 table{
@@ -111,6 +113,7 @@ table, th, td{
     font-size: 16px;
     padding: 10px;
     box-sizing: border-box;
+
     
 }
 
@@ -118,7 +121,7 @@ table, th, td{
     margin: 20px;
     display: flex;
     flex-direction: column;
-    height: 100px;
+    height: 100%;
     width: 80%;
     align-items: center;
     justify-content: center;
